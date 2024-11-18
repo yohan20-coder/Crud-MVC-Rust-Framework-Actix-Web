@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block content %}
+<h1>Tambah Barang</h1>
+<form action="/barang" method="post" class="mt-4">
+    <div class="mb-3">
+        <label for="nama" class="form-label">Nama Barang</label>
+        <input type="text" class="form-control" id="nama" name="nama" required>
+    </div>
+    <div class="mb-3">
+        <label for="deskripsi" class="form-label">Deskripsi</label>
+        <textarea class="form-control" id="deskripsi" name="deskripsi" rows="3"></textarea>
+    </div>
+    <div class="mb-3">
+        <label for="harga" class="form-label">Harga</label>
+        <input type="number" class="form-control" id="harga" name="harga" step="0.01" required>
+    </div>
+    <div class="mb-3">
+        <label for="stok" class="form-label">Stok</label>
+        <input type="number" class="form-control" id="stok" name="stok" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Simpan</button>
+</form>
+{% endblock %}

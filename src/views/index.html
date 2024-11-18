@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+{% block content %}
+<h1>Daftar Barang</h1>
+<a href="/barang/create" class="btn btn-primary mb-3">Tambah Barang</a>
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nama</th>
+            <th>Deskripsi</th>
+            <th>Harga</th>
+            <th>Stok</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for barang in barang_list %}
+        <tr>
+            <td>{{ barang.id }}</td>
+            <td>{{ barang.nama }}</td>
+            <td>{{ barang.deskripsi }}</td>
+            <td>{{ barang.harga }}</td>
+            <td>{{ barang.stok }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
